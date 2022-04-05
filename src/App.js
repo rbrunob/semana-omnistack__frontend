@@ -10,9 +10,7 @@ function App() {
     <div className="container">
       <img src={logo} alt="Aircnc" />
       <div className="content">
-
-    <Routes />
-
+        <Routes />
       </div>
     </div>
   );
