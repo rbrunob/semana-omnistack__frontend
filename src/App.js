@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import api from './services/api'
 import './App.css';
 
-import logo from './assets/logo.png'
+import logo from './assets/logo.svg'
 
 
 function App() {
@@ -14,7 +14,9 @@ function App() {
 
     const response = await api.post('/sessions', { email });
 
-    console.log(response);
+    const { _id } = response.data;
+
+    localStorage.setItem('user', _id);
   }
 
 
